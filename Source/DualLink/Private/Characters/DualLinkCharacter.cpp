@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "DualLinkCharacter.h"
+#include "../../Public/Characters/DualLinkCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -58,6 +58,45 @@ void ADualLinkCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
+	
+	/*APlayerState* PS = GetPlayerState();
+
+	FString PlayerName = PS ? PS->GetPlayerName() : TEXT("Unknown");
+
+	FString NetModeString;
+
+	switch (GetNetMode())
+	{
+	case NM_Standalone:
+		NetModeString = TEXT("Standalone");
+		break;
+
+	case NM_ListenServer:
+		NetModeString = TEXT("ListenServer");
+		break;
+
+	case NM_DedicatedServer:
+		NetModeString = TEXT("DedicatedServer");
+		break;
+
+	case NM_Client:
+		NetModeString = TEXT("Client");
+		break;
+
+	default:
+		NetModeString = TEXT("Unknown");
+		break;
+	}
+
+	UE_LOG(LogTemp, Warning,
+		TEXT("[%s][%s][Character] Role: %s | Authority: %d | Local: %d | Controller: %s"),
+		*NetModeString,
+		*PlayerName,
+		*UEnum::GetValueAsString(GetLocalRole()),
+		HasAuthority(),
+		IsLocallyControlled(),
+		*GetNameSafe(GetController())
+	);*/
 }
 
 //////////////////////////////////////////////////////////////////////////
