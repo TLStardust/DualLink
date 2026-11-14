@@ -23,9 +23,4 @@ public:
 	
 	virtual void SetupInputComponent() override;
 	
-	void RequestMoveTestActor();
-	
-	void Server_RequestMoveTestActor();
-	
-	ADualLinkGameMode* GameModePtr;
 };

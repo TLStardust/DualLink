@@ -20,20 +20,6 @@ public:
 	
 	virtual void PostLogin(APlayerController* NewPlayer) override;
 	
-	UPROPERTY(BlueprintReadWrite,EditAnywhere)
-	TSubclassOf<class ADualLinkTestActor> DualLinkPlayerTestActorClass;
-	
-	UPROPERTY()
-	TObjectPtr<ADualLinkTestActor> SpawnedTestActor;
-	
-	void SpawnNetworkTestActor();
-	void MoveNetworkTestActor();
-	void DestroyNetworkTestActor();
-	
-	FTimerHandle MoveActorTimerHandle;
-	FTimerHandle DestroyActorTimerHandle;
-	
-	void HandleClientMoveRequest(APlayerController* RequestingController);
 };
 
 
